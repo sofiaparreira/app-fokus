@@ -7,9 +7,9 @@ import { Timer } from "../components/Timer/index.jsx";
 import { IconPause, IconPlay } from "../components/Icons";
 
 const pomodoro = [
-  { id: 1, label: "Foco", initialValue: 25, image: require('../assets/images/pomodoro.png') },
-  { id: 2, label: "Pausa curta", initialValue: 5, image: require('../assets/images/short.png') },
-  { id: 3, label: "Pausa longa", initialValue: 15, image: require('../assets/images/long.png') }
+  { id: 1, label: "Foco", initialValue: 25 * 60, image: require('../assets/images/pomodoro.png') },
+  { id: 2, label: "Pausa curta", initialValue: 5 * 60, image: require('../assets/images/short.png') },
+  { id: 3, label: "Pausa longa", initialValue: 15 * 60, image: require('../assets/images/long.png') }
 ]
 
 export default function Index() {
@@ -50,7 +50,6 @@ export default function Index() {
         }
         return oldState - 1;
       })
-      console.log("timer rolando");
     }, 1000);
 
     timerRef.current = id;
